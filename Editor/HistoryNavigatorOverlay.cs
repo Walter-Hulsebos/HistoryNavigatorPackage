@@ -89,6 +89,7 @@ namespace Kronnect.Tools.HistoryNavigator
         {
             for (position = currentSelectionIndex + 1; position < history.Count; position++)
             {
+                if(currentSelectionIndex < 0) continue; 
                 if (history[position] != null) return history[position];
             }
             return null;
